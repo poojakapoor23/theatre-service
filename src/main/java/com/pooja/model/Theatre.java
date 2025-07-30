@@ -1,6 +1,8 @@
 package  com.pooja.model;
 //import jakarta.validation.constraints.Email;
 //import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 //import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Theater {
+public class Theatre {
 
     private String id;
 
@@ -26,7 +28,9 @@ public class Theater {
     private String location;
 
 
-    @Size(min = 100, max = 500, message = "Seating capacity should be between 4 and 20 characters")
-    private Integer seating_capacity;
+//    @Size(min = 100, max = 500, message = "Seating capacity should be between 4 and 20 characters")
+    @Min(value = 100, message = "Seating capacity should be at least 100")
+    @Max(value = 500, message = "Seating capacity should be at most 500")
+    private int seating_capacity;
 }
 
