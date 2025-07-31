@@ -1,6 +1,6 @@
 package com.pooja.entity;
 
-import com.pooja.model.City;
+//import com.pooja.model.City;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +19,7 @@ public class Theatre {
 //    private String id;  // You mentioned id should be String
 
     @Id
-   @GeneratedValue(strategy = GenerationType.UUID) // ✅ for String UUID
+//   @GeneratedValue(strategy = GenerationType.UUID) // ✅ for String UUID
     private String id;
 
     private String name;
